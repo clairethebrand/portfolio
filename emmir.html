@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Vivian Claire Okeke for EMMIR</title>
+<meta name="description" content="Academic portfolio of Vivian Claire Okeke: media and communication research, broadcast journalism, AI-built projects, certificates and talks.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Layout: vCard style. Sticky profile card on the left, tabbed reading panel on the right; stacks on phones. Dark-first black and gold brand. */
+:root{
+  --ink:#0B0806;          /* page ground */
+  --panel:#15100C;        /* cards */
+  --panel-2:#1D1611;      /* raised rows */
+  --line:rgba(201,168,76,.18);
+  --line-2:rgba(201,168,76,.38);
+  --gold:#C9A84C;
+  --gold-hi:#E2BE6A;
+  --cream:#F2EAD8;        /* primary text */
+  --muted:#B8A88C;        /* secondary text */
+  --faint:#8A7B63;
+  --display:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+  --body:'Jost','Segoe UI',system-ui,-apple-system,sans-serif;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:var(--cream);font-family:var(--body);font-weight:300;font-size:15.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--gold-hi);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--gold-hi);outline-offset:3px;border-radius:4px}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--display);font-weight:500;text-wrap:balance;margin:0;line-height:1.15}
+p{margin:0}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+.wrap{max-width:1180px;margin:0 auto;padding-inline:clamp(16px,3vw,32px);padding-block:clamp(20px,4vw,48px);display:grid;grid-template-columns:300px minmax(0,1fr);gap:28px;align-items:start}
+
+/* ---------- Profile card ---------- */
+.profile{position:sticky;top:calc(env(safe-area-inset-top,0px) + 24px);background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:30px 24px;display:grid;gap:20px;justify-items:center;text-align:center}
+.avatar{width:156px;height:156px;border-radius:50%;box-shadow:0 0 0 4px var(--panel),0 0 0 5px var(--gold);background:radial-gradient(circle at 30% 25%,#2A2017,#120D09);border:1px solid var(--line-2);display:grid;place-items:center;overflow:hidden}
+.avatar img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.avatar span{font-family:var(--display);font-size:3rem;color:var(--gold);font-style:italic}
+.who h1{font-size:1.9rem;color:var(--cream)}
+.who .role{margin-top:10px;display:inline-block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);background:rgba(201,168,76,.08);border:1px solid var(--line);padding:6px 12px;border-radius:8px;line-height:1.5}
+.contacts{width:100%;border-top:1px solid var(--line);padding-top:18px;display:grid;gap:14px;text-align:left}
+.c-row{display:grid;grid-template-columns:34px minmax(0,1fr);gap:12px;align-items:center}
+.c-ico{width:34px;height:34px;border-radius:10px;background:var(--panel-2);border:1px solid var(--line);display:grid;place-items:center;color:var(--gold)}
+.c-ico svg{width:16px;height:16px}
+.c-lbl{font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);line-height:1.3}
+.c-val{font-size:.9rem;color:var(--cream);overflow-wrap:anywhere;line-height:1.4}
+.copy{background:none;border:1px solid var(--line);color:var(--muted);font:inherit;font-size:.7rem;letter-spacing:.08em;padding:1px 8px;border-radius:6px;margin-left:6px;cursor:pointer}
+.copy:hover{color:var(--gold-hi);border-color:var(--line-2)}
+.socials{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.socials a{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);padding:6px 12px;border-radius:999px}
+.socials a:hover{color:var(--gold-hi);border-color:var(--line-2);text-decoration:none}
+
+/* ---------- Main panel ---------- */
+.main{background:var(--panel);border:1px solid var(--line);border-radius:18px;min-width:0;position:relative;overflow:hidden}
+.tabs{display:flex;gap:4px;justify-content:flex-end;flex-wrap:wrap;padding:10px 14px;border-bottom:1px solid var(--line);background:var(--panel-2)}
+.tab{background:none;border:0;color:var(--muted);font:inherit;font-size:.86rem;font-weight:400;padding:9px 14px;border-radius:10px;cursor:pointer;white-space:nowrap}
+.tab:hover{color:var(--cream)}
+.tab[aria-selected="true"]{color:var(--gold-hi);background:rgba(201,168,76,.08)}
+.pane{padding:clamp(22px,4vw,40px);display:grid;gap:36px}
+.pane-head{display:grid;gap:12px}
+.pane-head h2{font-size:clamp(2rem,4vw,2.6rem);color:var(--cream)}
+.rule{width:44px;height:3px;border-radius:3px;background:var(--gold)}
+.lede{color:var(--muted);max-width:66ch}
+.block{display:grid;gap:16px}
+.block h3{font-size:1.45rem;color:var(--cream)}
+.eyebrow{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.prose{display:grid;gap:14px;max-width:68ch;color:var(--cream)}
+.prose p{color:#E4DAC6}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.stat{background:var(--panel-2);border:1px solid var(--line);border-radius:14px;padding:16px 16px 14px}
+.stat b{display:block;font-family:var(--display);font-weight:500;font-size:2rem;color:var(--gold-hi);line-height:1.1;font-variant-numeric:tabular-nums}
+.stat span{font-size:.8rem;color:var(--muted);line-height:1.45;display:block;margin-top:6px}
+
+/* interests */
+.interests{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.interest{border-top:1px solid var(--line-2);padding-top:14px;display:grid;gap:8px;align-content:start}
+.interest h4{margin:0;font-family:var(--display);font-size:1.25rem;font-weight:500;color:var(--cream)}
+.interest p{font-size:.9rem;color:var(--muted)}
+
+/* timeline */
+.timeline{display:grid;gap:0;border-left:1px solid var(--line-2);margin-left:6px}
+.t-item{position:relative;padding:0 0 22px 24px;display:grid;gap:4px}
+.t-item:last-child{padding-bottom:0}
+.t-item::before{content:"";position:absolute;left:-6px;top:8px;width:11px;height:11px;border-radius:50%;background:var(--ink);border:2px solid var(--gold)}
+.t-item h4{margin:0;font-family:var(--body);font-weight:500;font-size:1rem;color:var(--cream)}
+.t-when{font-size:.8rem;color:var(--gold);font-variant-numeric:tabular-nums;letter-spacing:.04em}
+.t-item p,.t-item li{font-size:.9rem;color:var(--muted)}
+.t-item ul{margin:4px 0 0;padding-left:18px;display:grid;gap:4px}
+
+.press{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.4fr);background:var(--panel-2);border:1px solid var(--line-2);border-radius:16px;overflow:hidden}
+.press-photo{position:relative;min-height:100%;background:#0E0A07}
+.press-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.press-body{padding:22px 24px;display:grid;gap:12px;align-content:start}
+.press-mast{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.press-pub{font-family:var(--display);font-size:1.25rem;font-weight:600;color:var(--cream);letter-spacing:.02em}
+.press-mast time{font-size:.8rem;color:var(--muted);font-variant-numeric:tabular-nums;margin-left:auto}
+.press-head{font-size:1.55rem;line-height:1.2;color:var(--cream)}
+.press-body p{font-size:.92rem;color:var(--muted)}
+.press-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.press-stats div{border-top:1px solid var(--line-2);padding-top:8px;display:grid;gap:2px}
+.press-stats b{font-family:var(--display);font-size:1.6rem;font-weight:500;color:var(--gold-hi);line-height:1.1;font-variant-numeric:tabular-nums}
+.press-stats span{font-size:.76rem;color:var(--muted);line-height:1.4}
+.press-link{justify-self:start;font-size:.84rem;color:var(--ink);background:var(--gold);border-radius:999px;padding:8px 16px;font-weight:500}
+.press-link:hover{text-decoration:none;background:var(--gold-hi)}
+.focus{background:linear-gradient(160deg,rgba(201,168,76,.10),transparent 55%),var(--panel-2);border:1px solid var(--line-2);border-radius:16px;padding:24px;display:grid;gap:14px}
+.focus h3{font-size:1.9rem;color:var(--cream)}
+.focus-lede{font-size:1rem;color:#E4DAC6;max-width:66ch}
+.rq{margin:0;padding-left:22px;display:grid;gap:10px}
+.rq li{font-size:.93rem;color:var(--muted);padding-left:4px}
+.rq li::marker{color:var(--gold);font-family:var(--display);font-weight:600}
+.rq b{color:var(--cream);font-weight:500}
+.focus-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;border-top:1px solid var(--line);padding-top:14px}
+.focus-grid .k{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.focus-grid p{font-size:.86rem;color:var(--muted);margin-top:4px}
+@media (max-width:760px){.focus-grid{grid-template-columns:minmax(0,1fr)}}
+.role-sub{margin-top:8px;font-size:.82rem;color:var(--muted);line-height:1.45}
+.fit{display:grid;border:1px solid var(--line-2);border-radius:14px;overflow:hidden}
+.fit-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);background:rgba(201,168,76,.08);border-bottom:1px solid var(--line-2)}
+.fit-head span{padding:10px 18px;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.fit-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);border-bottom:1px solid var(--line)}
+.fit-row:last-child{border-bottom:0}
+.fit-req{display:grid;grid-template-columns:34px minmax(0,1fr);gap:6px;padding:16px 18px;background:var(--panel-2)}
+.fit-n{font-family:var(--display);font-size:1.3rem;color:var(--gold);line-height:1.2;font-variant-numeric:tabular-nums}
+.fit-req p{font-size:.9rem;color:#E4DAC6}
+.fit-ev{padding:16px 18px;display:grid;gap:10px;align-content:start}
+.fit-ev ul{margin:0;padding-left:18px;display:grid;gap:6px}
+.fit-ev li{font-size:.9rem;color:var(--muted)}
+.fit-ev li b{color:var(--cream);font-weight:500}
+.fit-ev li i{color:#D8CCB4}
+.fit-links{display:flex;flex-wrap:wrap;gap:8px}
+.fit-link{font-size:.74rem;letter-spacing:.06em;border:1px solid var(--line-2);border-radius:999px;padding:3px 11px}
+.fit-link:hover{text-decoration:none;border-color:var(--gold)}
+.fit-src{font-size:.8rem;color:var(--faint)}
+@media (max-width:760px){.fit-head{display:none}.fit-row{grid-template-columns:minmax(0,1fr)}.fit-req{border-bottom:1px dashed var(--line)}}
+.stories{display:grid;gap:18px}
+.story{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.4fr);gap:22px;background:var(--panel-2);border:1px solid var(--line);border-radius:14px;padding:18px;align-items:start}
+.story-text{display:grid;gap:8px;align-content:start}
+.story-text h4{margin:0;font-family:var(--display);font-size:1.5rem;font-weight:500;color:var(--cream);line-height:1.2}
+.story-text p{font-size:.92rem;color:var(--muted)}
+.mosaic{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:120px;gap:8px}
+.shot-btn{padding:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#0E0A07;cursor:zoom-in}
+.shot-btn img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;transition:transform .5s ease}
+.shot-btn:hover img{transform:scale(1.04)}
+.shot-btn:hover{border-color:var(--gold)}
+.story .shot-btn.lead{grid-row:span 2}
+.story.four .mosaic{grid-auto-rows:150px}
+.story.four .shot-btn.lead{grid-row:auto}
+.story.two .mosaic{grid-auto-rows:200px}
+.story.two .shot-btn.lead{grid-row:auto}
+/* publications */
+.pubs{list-style:none;margin:0;padding:0;display:grid;gap:14px;counter-reset:pub}
+.pub{background:var(--panel-2);border:1px solid var(--line);border-radius:14px;padding:18px;display:grid;grid-template-columns:150px minmax(0,1fr);gap:22px;align-items:start}
+.pub-info{display:grid;gap:10px;min-width:0}
+.paper{position:relative;aspect-ratio:1/1.414;width:100%;border-radius:4px;overflow:hidden;background:#F6F0E2;color:#231A10;box-shadow:0 10px 24px rgba(0,0,0,.45),0 0 0 1px rgba(201,168,76,.35);padding:12px 11px 10px;display:flex;flex-direction:column;gap:6px;text-align:left;font:inherit;border:0;transform:rotate(-1.2deg);transition:transform .3s ease}
+.pub:hover .paper{transform:rotate(0) translateY(-2px)}
+.paper::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--gold)}
+.paper .p-j{font-size:.47rem;letter-spacing:.12em;text-transform:uppercase;color:#7A5C38;line-height:1.35;margin-top:2px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.paper .p-t{font-family:var(--display);font-size:.76rem;font-weight:600;line-height:1.18;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
+.paper .p-a{font-size:.48rem;color:#5A4630;line-height:1.35;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.paper .p-a b{color:#231A10;font-weight:600}
+.paper .p-j,.paper .p-t,.paper .p-a,.paper .p-doi{flex-shrink:0}
+.paper .p-lines{flex:1 1 0;min-height:0;overflow:hidden;display:grid;align-content:start;gap:3px;margin-top:4px}
+.paper .p-lines i{display:block;height:2px;background:rgba(35,26,16,.12);border-radius:2px}
+.paper .p-lines i:nth-child(3n){width:78%}
+.paper .p-doi{font-size:.42rem;color:#7A5C38;overflow-wrap:anywhere;border-top:1px solid rgba(35,26,16,.15);padding-top:4px}
+.paper.scan{padding:0;cursor:zoom-in}
+.paper.scan img{width:100%;height:100%;object-fit:cover;object-position:top}
+.pub-links{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.pub-top{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.pill{font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;padding:3px 9px;border-radius:999px;border:1px solid var(--line-2);color:var(--gold)}
+.pill.dim{color:var(--muted);border-color:var(--line)}
+.pub h4{margin:0;font-family:var(--display);font-size:1.3rem;font-weight:500;color:var(--cream);line-height:1.25}
+.cite{font-size:.86rem;color:var(--muted)}
+.cite i{color:#D8CCB4}
+.pub-role{font-size:.86rem;color:#D8CCB4;border-left:2px solid var(--line-2);padding-left:12px}
+.doi{font-size:.82rem;overflow-wrap:anywhere}
+.pub-links .proof{margin-top:0}
+
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:.82rem;color:var(--cream);background:var(--panel-2);border:1px solid var(--line);padding:6px 12px;border-radius:999px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.list{margin:0;padding-left:18px;display:grid;gap:6px;color:var(--muted);font-size:.92rem}
+
+/* feature rows (journalism) */
+.features{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.feature{background:var(--panel-2);border:1px solid var(--line);border-radius:14px;padding:18px 20px;display:grid;gap:8px;align-content:start}
+.feature h4{margin:0;font-family:var(--display);font-size:1.25rem;font-weight:500;color:var(--cream)}
+.feature p{font-size:.9rem;color:var(--muted)}
+.feature .k{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.media-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.m-card{display:grid;grid-template-rows:auto 1fr;background:var(--panel-2);border:1px solid var(--line);border-radius:14px;overflow:hidden;color:var(--cream)}
+.m-card:hover{text-decoration:none;border-color:var(--line-2)}
+.m-art{position:relative;aspect-ratio:16/9;background:radial-gradient(circle at 30% 20%,#2A2017,#0E0A07);overflow:hidden}
+.m-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.m-card:hover .m-art img{transform:scale(1.04)}
+.m-fallback{position:absolute;inset:0;display:grid;place-items:center;color:rgba(201,168,76,.35)}
+.m-fallback svg{width:30%;max-width:84px}
+.m-play{position:absolute;right:12px;bottom:12px;width:40px;height:40px;border-radius:50%;background:rgba(11,8,6,.82);border:1px solid var(--gold);color:var(--gold-hi);display:grid;place-items:center}
+.m-play svg{width:18px;height:18px}
+.m-card.audio .m-art{aspect-ratio:16/9;background:linear-gradient(135deg,#1D1611,#2C1E15 60%,#3D2B1F)}
+.m-body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:4px}
+.m-body .k{font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.m-body h4{margin:0;font-family:var(--display);font-size:1.2rem;font-weight:500;line-height:1.25;color:var(--cream)}
+.m-body p{font-size:.84rem;color:var(--muted)}
+.m-cta{margin-top:auto;padding-top:8px;font-size:.78rem;color:var(--gold-hi);letter-spacing:.04em}
+.reel{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:24px;align-items:center}
+.reel .m-card.big .m-play{width:64px;height:64px;right:auto;bottom:auto;left:50%;top:50%;transform:translate(-50%,-50%)}
+.reel .m-card.big .m-play svg{width:26px;height:26px}
+.reel .m-card.big .m-body{display:none}
+.reel-text{display:grid;gap:10px}
+.reel-text h3{font-size:1.7rem;color:var(--cream)}
+.reel-text p{color:var(--muted)}
+.quote{margin:0;background:var(--panel-2);border:1px solid var(--line);border-radius:14px;padding:18px 20px;display:grid;gap:10px}
+.quote blockquote{margin:0;font-family:var(--display);font-size:1.15rem;font-style:italic;color:var(--cream)}
+.quote figcaption{font-size:.84rem;color:var(--muted)}
+.quote b{color:var(--gold-hi);font-weight:500}
+.player{position:relative;aspect-ratio:16/9;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#000}
+.player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.sample{display:grid;gap:6px;padding:16px 18px;border:1px solid var(--line-2);border-radius:14px;background:linear-gradient(160deg,rgba(201,168,76,.08),transparent 60%);color:var(--cream)}
+.sample:hover{text-decoration:none;border-color:var(--gold)}
+.sample small{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.sample b{font-family:var(--display);font-weight:500;font-size:1.15rem}
+.sample span{font-size:.84rem;color:var(--muted)}
+
+/* filters + project grid */
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.filter{background:none;border:1px solid var(--line);color:var(--muted);font:inherit;font-size:.82rem;padding:6px 14px;border-radius:999px;cursor:pointer}
+.filter:hover{color:var(--cream)}
+.filter[aria-pressed="true"]{color:var(--ink);background:var(--gold);border-color:var(--gold)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.card{background:var(--panel-2);border:1px solid var(--line);border-radius:14px;overflow:hidden;cursor:pointer;display:grid;grid-template-rows:auto 1fr;text-align:left;font:inherit;color:inherit;padding:0}
+.card:hover{border-color:var(--line-2)}
+.card:hover .thumb img{transform:scale(1.04)}
+.thumb{aspect-ratio:16/10;background:#0E0A07;overflow:hidden;position:relative}
+.thumb img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .5s ease}
+.thumb .ph{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--display);font-style:italic;font-size:1.6rem;color:var(--gold);padding:12px;text-align:center}
+.card-body{padding:14px 16px 16px;display:grid;gap:6px;align-content:start}
+.card-body .k{font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.card-body h4{margin:0;font-family:var(--display);font-size:1.25rem;font-weight:500;color:var(--cream)}
+.card-body p{font-size:.85rem;color:var(--muted);line-height:1.55}
+
+/* credentials */
+.creds{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.cred{background:var(--panel-2);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:grid;grid-template-rows:auto 1fr}
+.cred-art{display:block;width:100%;border:0;padding:0;margin:0;font:inherit;color:inherit}
+button.cred-art{cursor:zoom-in}
+button.cred-art img{transition:transform .4s ease}
+button.cred-art:hover img{transform:scale(1.03)}
+.cred.has-img:hover{border-color:var(--line-2)}
+.cred-art img{object-position:center top}
+.verify,.proof{justify-self:start;margin-top:6px;}
+.cred-body .verify{margin-top:auto;padding-top:4px}
+.verify,.proof{font-size:.78rem;letter-spacing:.04em;color:var(--gold-hi);background:none;border:1px solid var(--line-2);border-radius:999px;padding:4px 12px;font-family:inherit;cursor:pointer}
+.verify:hover,.proof:hover{text-decoration:none;border-color:var(--gold)}
+.cred-art{aspect-ratio:4/3;background:#0E0A07;position:relative;overflow:hidden}
+.cred-art img{width:100%;height:100%;object-fit:cover}
+.cred:not(.has-img) .cred-art{aspect-ratio:16/7}
+.seal{position:absolute;inset:12px;border:1px solid var(--line-2);border-radius:8px;display:grid;place-items:center;align-content:center;gap:6px;text-align:center;padding:14px;background:repeating-linear-gradient(135deg,rgba(201,168,76,.03) 0 8px,transparent 8px 16px)}
+.seal i{font-family:var(--display);font-size:1.05rem;color:var(--gold-hi);line-height:1.3}
+.seal small{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--faint)}
+.cred-body{padding:14px 16px 16px;display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+.cred-body h4{margin:0;font-size:.98rem;font-weight:500;color:var(--cream);line-height:1.4}
+.cred-body p{font-size:.84rem;color:var(--muted)}
+.cred-body .yr{font-size:.78rem;color:var(--gold);font-variant-numeric:tabular-nums}
+
+/* talks */
+.talks{display:grid;gap:0}
+.talk{display:grid;grid-template-columns:120px minmax(0,1fr);gap:18px;padding:16px 0;border-bottom:1px solid var(--line);align-items:start}
+.talk.has-thumb{grid-template-columns:120px minmax(0,1fr) 84px}
+.talk-text{display:grid;gap:4px;justify-items:start;min-width:0}
+.thumb-btn{width:84px;padding:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#0E0A07;cursor:zoom-in;display:grid;color:var(--muted);font:inherit}
+.thumb-btn img{width:84px;height:84px;object-fit:cover;object-position:top}
+.thumb-btn span{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;padding:4px 0;text-align:center}
+.thumb-btn:hover{border-color:var(--gold)}
+.talk:last-child{border-bottom:0}
+.talk time{font-size:.82rem;color:var(--gold);font-variant-numeric:tabular-nums;padding-top:3px}
+.talk h4{margin:0;font-family:var(--display);font-size:1.2rem;font-weight:500;color:var(--cream);line-height:1.3}
+.talk p{font-size:.88rem;color:var(--muted)}
+.gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.gallery button{padding:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;aspect-ratio:1;background:#0E0A07;cursor:zoom-in}
+.gallery img{width:100%;height:100%;object-fit:cover}
+
+/* modal + lightbox */
+.modal{position:fixed;inset:0;z-index:50;background:rgba(6,4,3,.94);display:grid;grid-template-rows:auto minmax(0,1fr);padding-top:env(safe-area-inset-top,0px)}
+.modal-head{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px clamp(16px,3vw,32px);border-bottom:1px solid var(--line)}
+.modal-head h3{font-size:1.5rem;color:var(--cream)}
+.modal-head p{font-size:.8rem;color:var(--muted)}
+.x{background:none;border:1px solid var(--line-2);color:var(--gold-hi);width:40px;height:40px;border-radius:10px;font-size:1.1rem;cursor:pointer;flex:none}
+.modal-body{overflow:auto;padding:24px clamp(16px,3vw,32px) 60px}
+.modal-inner{max-width:980px;margin:0 auto;display:grid;gap:22px}
+.ps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.ps div{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.ps b{display:block;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:6px}
+.ps span{font-size:.92rem;color:#E4DAC6}
+.shot{display:grid;gap:8px}
+.shot figcaption{font-size:.84rem;color:var(--muted)}
+.shot figcaption b{color:var(--gold-hi);font-weight:500}
+.shot img{border:1px solid var(--line);border-radius:10px;width:100%}
+figure{margin:0}
+.lb{position:fixed;inset:0;z-index:60;background:rgba(6,4,3,.95);display:grid;place-items:center;padding:clamp(16px,4vw,48px)}
+.lb img{max-height:84vh;width:auto;max-width:100%;border-radius:8px;border:1px solid var(--line-2)}
+.lb .x{position:absolute;top:calc(env(safe-area-inset-top,0px) + 14px);right:16px}
+.lb p{margin-top:12px;color:var(--muted);font-size:.86rem;text-align:center}
+.lb figure{display:grid;justify-items:center}
+
+footer{grid-column:1/-1;text-align:center;font-size:.78rem;color:var(--faint);padding-top:8px}
+
+@media (max-width:1000px){
+  .grid,.creds,.media-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .reel{grid-template-columns:minmax(0,1fr)}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .interests{grid-template-columns:1fr}
+  .story{grid-template-columns:minmax(0,1fr)}
+  .press{grid-template-columns:minmax(0,1fr)}
+  .press-photo{aspect-ratio:16/9;min-height:0}
+  .press-stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:860px){
+  .wrap{grid-template-columns:minmax(0,1fr)}
+  .profile{position:static;grid-template-columns:auto minmax(0,1fr);justify-items:start;text-align:left;align-items:center}
+  .avatar{width:96px;height:96px}
+  .avatar span{font-size:2.2rem}
+  .contacts,.socials{grid-column:1/-1}
+  .socials{justify-content:flex-start}
+  .tabs{justify-content:flex-start;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+}
+@media (max-width:620px){
+  .grid,.creds,.media-grid,.features,.two,.ps{grid-template-columns:minmax(0,1fr)}
+  .gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .mosaic,.story.four .mosaic{grid-auto-rows:110px}
+  .story.two .mosaic{grid-auto-rows:130px}
+  .talk,.talk.has-thumb{grid-template-columns:minmax(0,1fr) 72px;gap:4px 14px}
+  .pub{grid-template-columns:minmax(0,1fr);gap:16px;padding:16px}
+  .pub .paper{width:132px}
+  .talk time{grid-column:1/-1}
+  .talk time:empty{display:none}
+  .thumb-btn{width:72px}
+  .thumb-btn img{width:72px;height:72px}
+  .thumb-btn span{letter-spacing:.04em;font-size:.58rem}
+  .who h1{font-size:1.6rem}
+}
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+
+<aside class="profile" aria-label="Profile">
+  <div class="avatar" id="avatar"><span>VC</span></div>
+  <div class="who">
+    <h1>Vivian Claire Okeke</h1>
+    <span class="role">Applicant, EMMIR Edition 14<br>2027 to 2029</span><p class="role-sub">Media and intercultural communication researcher, broadcast journalist</p>
+  </div>
+  <div class="contacts">
+    <div class="c-row">
+      <span class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+      <div><div class="c-lbl">Email</div><div class="c-val"><span id="email">hivivianclaire@gmail.com</span><button class="copy" type="button" data-copy="email">Copy</button></div></div>
+    </div>
+    <div class="c-row">
+      <span class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+      <div><div class="c-lbl">Based in</div><div class="c-val">Abuja, Nigeria</div></div>
+    </div>
+    <div class="c-row">
+      <span class="c-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M9 8v8M13 8h1.5a4 4 0 0 1 0 8H13Z"/></svg></span>
+      <div><div class="c-lbl">ORCID</div><div class="c-val"><a href="https://orcid.org/0009-0007-9639-3783" target="_blank" rel="noopener">0009-0007-9639-3783</a></div></div>
+    </div>
+  </div>
+  <div class="socials">
+    <a href="https://www.linkedin.com/in/vivianclaireokeke" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://github.com/clairethebrand" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</aside>
+
+<main class="main">
+  <nav class="tabs" role="tablist" aria-label="Portfolio sections">
+    <button class="tab" role="tab" id="t-emmir" aria-controls="emmir" data-tab="emmir">EMMIR Fit</button>
+    <button class="tab" role="tab" id="t-profile" aria-controls="profile" data-tab="profile">Profile</button>
+    <button class="tab" role="tab" id="t-research" aria-controls="research" data-tab="research">Research</button>
+    <button class="tab" role="tab" id="t-talks" aria-controls="talks" data-tab="talks">Impact &amp; Leadership</button>
+    <button class="tab" role="tab" id="t-built" aria-controls="built" data-tab="built">Built with Technology</button>
+    <button class="tab" role="tab" id="t-media" aria-controls="media" data-tab="media">Journalism &amp; Media</button>
+    <button class="tab" role="tab" id="t-credentials" aria-controls="credentials" data-tab="credentials">Certificates &amp; Awards</button>
+  </nav>
+
+  <!-- ================= PROFILE ================= -->
+  <!-- ================= EMMIR FIT ================= -->
+  <section class="pane" id="emmir" role="tabpanel" aria-labelledby="t-emmir">
+    <div class="pane-head"><span class="eyebrow">European Master in Migration and Intercultural Relations</span><h2>How I meet EMMIR's requirements</h2><div class="rule"></div>
+      <p class="lede">Each entry requirement published by EMMIR, in the programme's own order, with my evidence beside it. Links open the matching section of this portfolio.</p></div>
+    <div class="fit">
+      <div class="fit-head"><span>EMMIR asks for</span><span>My evidence</span></div>
+      <div class="fit-row">
+        <div class="fit-req"><span class="fit-n">01</span><p>A first degree in a field related to migration studies. EMMIR names social sciences, history, cultural studies, educational sciences, law, economics, development studies and journalism.</p></div>
+        <div class="fit-ev"><ul><li><b>B.Sc. (Honours) Media and Communication</b>, Afe Babalola University, Nigeria (2022 to 2024).</li><li>Journalism coursework including Online Journalism and Computer Assisted Communication, and Science and Technology Reporting.</li><li>Michigan State University <i>Become a Journalist</i> specialization (5 courses, 2025).</li></ul><div class="fit-links"><a class="fit-link" href="#profile">Education</a><a class="fit-link" href="#credentials">Certificates</a></div></div>
+      </div>
+      <div class="fit-row">
+        <div class="fit-req"><span class="fit-n">02</span><p>A final grade of at least C+ or equivalent.</p></div>
+        <div class="fit-ev"><ul><li><b>First Class Honours, CGPA 4.92 / 5.0</b> (WES equivalent 3.95 / 4.0).</li><li>Best Graduating Student, Department of Media and Communication, 12th Convocation (2024).</li><li>Founder's Academic Excellence Award for three consecutive sessions.</li></ul><div class="fit-links"><a class="fit-link" href="#credentials">Awards</a></div></div>
+      </div>
+      <div class="fit-row">
+        <div class="fit-req"><span class="fit-n">03</span><p>The last degree should not be older than five years.</p></div>
+        <div class="fit-ev"><ul><li>Degree completed <b>July 2024</b>: about three years old at the 2027 intake.</li></ul></div>
+      </div>
+      <div class="fit-row">
+        <div class="fit-req"><span class="fit-n">04</span><p>Documented knowledge of migration studies and intercultural relations.</p></div>
+        <div class="fit-ev"><ul><li><b>Sole author</b>, <i>Cross-cultural communication challenges in global business</i>, Path of Science (2025).</li><li>Co-author, <i>Empowerment and resistance: African women's use of digital spaces for identity construction and social change</i>, GRS Journal (2025).</li><li>Campus to Career 2.0 included scholarship guidance for study in Germany, the UK, the US and Canada with TGM Education (Vanguard, 2026).</li><li>Proposed EMMIR research: <b>trust in the digital migration journey</b>.</li></ul><div class="fit-links"><a class="fit-link" href="#research">Research focus</a><a class="fit-link" href="#talks">Vanguard feature</a></div></div>
+      </div>
+      <div class="fit-row">
+        <div class="fit-req"><span class="fit-n">05</span><p>Documented knowledge of empirical methods.</p></div>
+        <div class="fit-ev"><ul><li>Coursework: Foundation of Communication Research, Research Methodology I, Statistical Analysis in Research Methodology, Introduction to Social Statistics I and II.</li><li><b>Co-first author</b> of a survey-based audience study: questionnaire design and administration, focus groups, descriptive statistics.</li><li>Digital ethnography, discourse analysis and systematic review in co-authored papers.</li></ul><div class="fit-links"><a class="fit-link" href="#research">Methods</a></div></div>
+      </div>
+      <div class="fit-row">
+        <div class="fit-req"><span class="fit-n">06</span><p>Proof of English proficiency. A waiver is possible for citizens of countries where English is an official language, or for higher education completed in English.</p></div>
+        <div class="fit-ev"><ul><li>Nigerian citizen: <b>English is Nigeria's official language</b>.</li><li>Degree taught in English; published five English-language journal articles; a year as an English-language broadcast journalist.</li></ul><div class="fit-links"><a class="fit-link" href="#media">Journalism & Media</a></div></div>
+      </div>
+      <div class="fit-row">
+        <div class="fit-req"><span class="fit-n">07</span><p>Professional experience (preferred, not required).</p></div>
+        <div class="fit-ev"><ul><li><b>Broadcast Journalist</b>, NYSC National Television and Radio, Abuja (May 2025 to May 2026).</li><li>Strategic Communication Specialist, CadCapital and CadLands (2023 to 2026).</li><li><b>Founder</b>, Campus to Career: more than 500 registrations and about 400 participants at its 2026 edition, covered by Vanguard.</li></ul><div class="fit-links"><a class="fit-link" href="#media">Journalism & Media</a><a class="fit-link" href="#talks">Impact</a></div></div>
+      </div>
+    </div>
+    <div class="block">
+      <h3>Where I fit the programme</h3>
+      <div class="features"><div class="feature"><span class="k">EMMIR focus</span><h4>Africa, Europe and Asia</h4><p>EMMIR is taught across partners in Africa, Europe and Asia. My research and fieldwork are rooted in Nigeria, and my published work looks at how Africans communicate and organise online.</p></div><div class="feature"><span class="k">EMMIR focus</span><h4>Research-based internship</h4><p>Semester three is a project-based internship with fieldwork. I have run field-facing work before: a campus radio audience survey, school outreach, and communication training for persons with disabilities.</p></div><div class="feature"><span class="k">EMMIR focus</span><h4>Multidisciplinary</h4><p>My proposed research joins migration studies, intercultural communication and technology: how digital tools can give migrants information they trust and use.</p></div></div>
+    </div>
+    <p class="fit-src">Requirements summarised from <a href="https://www.emmir.org/requirements" target="_blank" rel="noopener">emmir.org/requirements</a>.</p>
+  </section>
+
+  <section class="pane" id="profile" role="tabpanel" aria-labelledby="t-profile" hidden>
+    <div class="pane-head"><h2>About me</h2><div class="rule"></div></div>
+    <div class="prose">
+      <p>I am a Nigerian media and communication researcher and broadcast journalist. I graduated with First Class Honours in Media and Communication from Afe Babalola University with a CGPA of 4.92 out of 5.0, as the best graduating student in my department. I then spent my national service year as a broadcast journalist at NYSC National Television and Radio in Abuja, producing news bulletins and hosting programmes.</p>
+      <p>My research asks how people communicate across cultures and through digital platforms, and how that shapes identity, trust and opportunity for Africans at home and abroad. I have published on cross-cultural communication in global business, how student audiences judge their campus radio station, how African women use online spaces to shape identity and push for change, and how AI affects trust in newsrooms and online shopping.</p>
+      <p>At EMMIR I want to study how technology can make migration information more trustworthy and useful. Alongside research, I build. I founded Campus to Career, a programme that prepares university students for work, and I design websites and tools with AI and no-code platforms for clients and social causes.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>5</b><span>peer-reviewed journal articles, 2025</span></div>
+      <div class="stat"><b>4.92</b><span>CGPA out of 5.0, First Class Honours</span></div>
+      <div class="stat"><b>12</b><span>months in national TV and radio newsrooms</span></div>
+      <div class="stat"><b>6</b><span>university and Google certificates, verifiable on Coursera</span></div>
+    </div>
+    <div class="block">
+      <span class="eyebrow">What I study</span>
+      <div class="interests">
+        <div class="interest"><h4>Technology, trust and migration</h4><p>How digital tools can give migrants information and support they trust enough to use, and how to design them so more people benefit.</p></div>
+        <div class="interest"><h4>Intercultural communication</h4><p>How differences in communication style shape collaboration between people from different cultures, in business and beyond.</p></div>
+                <div class="interest"><h4>Digital spaces in Africa</h4><p>How young Africans and African women use online platforms to build identity, find opportunity and drive social change.</p></div>
+      </div>
+    </div>
+    <div class="block">
+      <h3>Education</h3>
+      <div class="timeline">
+        <div class="t-item">
+          <span class="t-when">2022 to 2024</span>
+          <h4>B.Sc. (Honours) Media and Communication, First Class</h4>
+          <p>Afe Babalola University, Ado-Ekiti, Nigeria</p>
+          <ul>
+            <li>CGPA 4.92 / 5.0 (WES equivalent 3.95 / 4.0)</li>
+            <li>Best Graduating Student, Department of Media and Communication, 12th Convocation (October 2024)</li>
+            <li>Final year project: Audience Knowledge and Perception of ABUAD Radio, supervised by Dr. Godsgift Odiepiriye Harold</li>
+          </ul>
+        </div>
+        <div class="t-item">
+          <span class="t-when">2020 to 2021</span>
+          <h4>First year, B.Sc. Mass Communication</h4>
+          <p>University of Calabar, Nigeria. CGPA 4.33 / 5.0 before transferring to Afe Babalola University.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= RESEARCH ================= -->
+  <section class="pane" id="research" role="tabpanel" aria-labelledby="t-research" hidden>
+    <div class="pane-head"><h2>Research</h2><div class="rule"></div>
+      <p class="lede">Five peer-reviewed articles published in 2025, led by my work on intercultural communication and African digital spaces. Each entry states my role and the methods I used.</p></div>
+    <div class="focus">
+      <span class="eyebrow">What I want to study at EMMIR</span>
+      <h3>Trust in the digital migration journey</h3>
+      <p class="focus-lede">How digital technology can give migrants and people considering migration information and support they trust enough to use, and how such tools should be designed so more people benefit.</p>
+      <ol class="rq">
+        <li><b>Information.</b> Where do young Nigerians considering migration get information on study, work, visas and routes abroad, and which sources do they trust: official portals, social media, agents, diaspora networks or AI chatbots?</li>
+        <li><b>Trust.</b> What makes a digital tool or message trustworthy to migrants across cultures and languages: the source, the design, community endorsement or proof of accuracy?</li>
+        <li><b>Design for uptake.</b> Can tools co-designed with migrant communities, such as verified information hubs and messaging-based help lines, reduce exposure to fraud and misinformation and reach more people?</li>
+      </ol>
+      <div class="focus-grid">
+        <div><span class="k">Methods</span><p>Surveys, interviews and focus groups, digital ethnography of online migration conversations, and co-design sessions with users.</p></div>
+        <div><span class="k">Builds on</span><p>My co-authored framework for trust in newsroom AI, my intercultural communication paper, and scholarship guidance for study abroad at Campus to Career 2.0.</p></div>
+        <div><span class="k">Why EMMIR</span><p>Fieldwork across Africa, Europe and Asia would let me test these questions with migrant communities in more than one setting.</p></div>
+      </div>
+    </div>
+    <div class="block">
+      <h3>Empirical methods I have used</h3>
+      <div class="chips" id="methods"></div>
+    </div>
+    <ol class="pubs" id="pubs"></ol>
+    <div class="two">
+      <div class="block">
+        <span class="eyebrow">Research training</span>
+        <ul class="list">
+          <li>Foundation of Communication Research</li>
+          <li>Research Methodology I</li>
+          <li>Statistical Analysis in Research Methodology</li>
+          <li>Introduction to Social Statistics I and II</li>
+          <li>Online Journalism and Computer Assisted Communication</li>
+          <li>Science and Technology Reporting</li>
+        </ul>
+      </div>
+      <div class="block">
+        <span class="eyebrow">Research experience</span>
+        <div class="timeline">
+          <div class="t-item">
+            <span class="t-when">Oct 2023 to May 2024</span>
+            <h4>Research Assistant, Department of Media and Communication, ABUAD</h4>
+            <p>Co-designed and ran a survey of campus radio listeners, coded station programming, led listener group discussions and analysed the data. The study became a co-first-authored journal article.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= JOURNALISM ================= -->
+  <section class="pane" id="media" role="tabpanel" aria-labelledby="t-media" hidden>
+    <div class="pane-head"><h2>Journalism &amp; media</h2><div class="rule"></div>
+      <p class="lede">Documentary interviews, community stories and national broadcast work I produced, hosted or directed. Select any piece to watch or listen.</p></div>
+
+    <div class="reel" id="reel"></div>
+
+    <div class="block">
+      <h3>Watch and listen</h3>
+      <div class="filters" id="media-filters" role="group" aria-label="Filter media"></div>
+      <div class="media-grid" id="media-grid"></div>
+    </div>
+
+    <div class="block">
+      <h3>Newsroom roles</h3>
+      <div class="timeline">
+        <div class="t-item">
+          <span class="t-when">May 2025 to May 2026</span>
+          <h4>Broadcast Journalist, NYSC National Television and Radio, Abuja</h4>
+          <p>National service year in a working newsroom across radio and television.</p>
+        </div>
+        <div class="t-item">
+          <span class="t-when">Dec 2022 to Jul 2024</span>
+          <h4>Campus broadcaster, ABUAD Radio 88.1 FM</h4>
+          <p>Delivered weekly segments on communication, media literacy and professional development, and trained students in radio production.</p>
+        </div>
+      </div>
+    </div>
+    <div class="features">
+      <div class="feature"><span class="k">News</span><h4>Weekly news bulletins</h4><p>Researched, wrote and presented news bulletins for radio and television on national and human-interest stories.</p></div>
+      <div class="feature"><span class="k">Hosting</span><h4>Moral Rebranding and Youth and Tech</h4><p>Hosted the Moral Rebranding series on television and radio, and co-hosted Youth and Tech, a programme on emerging technology, digital literacy and youth empowerment.</p></div>
+      <div class="feature"><span class="k">Interview</span><h4>The NYSC Director General</h4><p>Interviewed Brigadier General Olakunle Nafiu, Director General of the National Youth Service Corps.</p></div>
+      <div class="feature"><span class="k">Newsroom tool</span><h4>AI-assisted news scanner</h4><p>Built a tool that scans the web in real time and returns updated stories already formatted in the station's broadcast style.</p></div>
+    </div>
+
+    <div class="block" id="testimonials-block">
+      <h3>What people say</h3>
+      <div class="media-grid" id="testimonials"></div>
+    </div>
+  </section>
+
+  <!-- ================= BUILT WITH AI ================= -->
+  <section class="pane" id="built" role="tabpanel" aria-labelledby="t-built" hidden>
+    <div class="pane-head"><h2>Built with Technology</h2><div class="rule"></div>
+      <p class="lede">Platforms I designed and built with AI and no-code tools for communities that need clear, trustworthy information: students choosing careers and study abroad, patients seeking verified care, faith communities and pet adopters. The same skills underpin the tools my research proposes. Select a project to see its screens.</p></div>
+    <div class="filters" id="filters" role="group" aria-label="Filter projects"></div>
+    <div class="grid" id="projects"></div>
+  </section>
+
+  <!-- ================= CREDENTIALS ================= -->
+  <section class="pane" id="credentials" role="tabpanel" aria-labelledby="t-credentials" hidden>
+    <div class="pane-head"><h2>Certificates &amp; awards</h2><div class="rule"></div>
+      <p class="lede">Select a certificate to view it in full. Coursera certificates link to their public verification page.</p></div>
+    <div class="filters" id="cred-filters" role="group" aria-label="Filter credentials"></div>
+    <div class="creds" id="creds"></div>
+  </section>
+
+  <!-- ================= TALKS ================= -->
+  <section class="pane" id="talks" role="tabpanel" aria-labelledby="t-talks" hidden>
+    <div class="pane-head"><h2>Impact &amp; leadership</h2><div class="rule"></div>
+      <p class="lede">The programmes I lead, the rooms I have spoken in, and the students and professionals who were there. Select any photo or flyer to view it in full.</p></div>
+
+    <article class="press">
+      <div class="press-photo"><img src="assets/impact/c2c-audience-1.jpg" alt="Students at Campus to Career 2.0, Afe Babalola University"></div>
+      <div class="press-body">
+        <div class="press-mast"><span class="eyebrow">Impact feature</span><span class="press-pub">Vanguard</span><time datetime="2026-07-30">30 July 2026</time></div>
+        <h3 class="press-head">Campus to Career 2.0 attracts 500 registrations, scholarship partners at ABUAD</h3>
+        <p>Vanguard covered the second edition of Campus to Career, the programme I founded in 2024. It ran on 2 and 3 May 2026 at Afe Babalola University, with keynotes, student pitches, LinkedIn clinics, career counselling, CV reviews and scholarship guidance from TGM Education. The Vice Chancellor and Deputy Vice Chancellor attended.</p>
+        <div class="press-stats">
+          <div><b>500+</b><span>paid registrations</span></div>
+          <div><b>~400</b><span>students took part</span></div>
+          <div><b>10</b><span>pitch winners awarded cash prizes</span></div>
+          <div><b>30</b><span>students given LinkedIn profile support</span></div>
+        </div>
+        <a class="press-link" href="https://www.vanguardngr.com/2026/07/campus-to-career-2-0-attracts-500-registrations-scholarship-partners-at-abuad/" target="_blank" rel="noopener">Read the article on Vanguard</a>
+      </div>
+    </article>
+
+    <div class="block">
+      <h3>Field experience with communities</h3>
+      <p class="lede">EMMIR's third semester is a research-based internship. These are the communities I have already worked with directly: university students, school pupils, young founders and, through the Digital Literacy for All Initiative, persons with disabilities.</p>
+      <div class="stories" id="stories"></div>
+    </div>
+
+    <div class="block">
+      <h3>Leadership and service</h3>
+      <div class="timeline">
+        <div class="t-item">
+          <span class="t-when">2024 to present</span>
+          <h4>Founder and Programme Lead, Campus to Career</h4>
+          <p>A career-readiness and mentorship programme for university students, focused on employability, exposure to entrepreneurship and mindset. The first edition in 2024 reached 245 students. Campus to Career 2.0 (ABUAD, May 2026) drew more than 500 paid registrations and about 400 participants, and was featured in Vanguard.</p>
+        </div>
+        <div class="t-item">
+          <span class="t-when">Aug to Sep 2025</span>
+          <h4>Project Assistant, Digital Literacy for All Initiative</h4>
+          <p>Designed and delivered communication training for persons with disabilities on digital tools, business communication and content creation.</p>
+        </div>
+        <div class="t-item">
+          <span class="t-when">Apr 2023 to May 2024</span>
+          <h4>President, Department of Media and Communication Students Association, ABUAD</h4>
+          <p>Led a 19-member student leadership team running academic support, peer tutorials and career events for the department.</p>
+        </div>
+        <div class="t-item">
+          <span class="t-when">2022</span>
+          <h4>Founder, Global Transformation Conference</h4>
+          <p>An online conference and talk series on careers, branding and global opportunity, streamed on LinkedIn and YouTube.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="block">
+      <h3>Talks and presentations</h3>
+      <p class="lede">Fourteen sessions since 2022 as a speaker, host and radio guest.</p>
+      <div class="talks" id="talklist"></div>
+    </div>
+    <div class="block" id="more-talks-block" hidden>
+      <span class="eyebrow">More sessions</span>
+      <div class="talks" id="moretalks"></div>
+    </div>
+  </section>
+</main>
+
+<footer>&copy; 2026 Vivian Claire Okeke. Abuja, Nigeria.</footer>
+</div>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="m-title" hidden>
+  <div class="modal-head">
+    <div><h3 id="m-title"></h3><p id="m-sub"></p></div>
+    <button class="x" type="button" id="m-close" aria-label="Close">&#x2715;</button>
+  </div>
+  <div class="modal-body" id="m-body"></div>
+</div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+  <button class="x" type="button" id="lb-close" aria-label="Close">&#x2715;</button>
+  <figure><img id="lb-img" alt=""><p id="lb-cap"></p></figure>
+</div>
+
+<script>
+/* ===== Content. Edit these lists to update the site. ===== */
+
+/* Profile photo: set to e.g. "assets/photo.jpg" once added. */
+const PHOTO = "assets/photo-vivian.jpg";
+
+/* Publications. img: screenshot of the first page. cert: certificate of publication image. Both optional. */
+const PUBS = [
+  {title:"Cross-cultural communication challenges in global business: How cultural differences in communication styles affect international collaboration",
+   authors:"Okeke, V. C.", year:2025, journal:"Path of Science", vol:"11(10), 6001 to 6009",
+   doi:"10.22178/pos.123-11", tag:"Sole author",
+   role:"Sole author. Developed the conceptual framework and synthesised empirical literature on cross-cultural communication in global business."},
+  {title:"Empowerment and resistance: African women's use of digital spaces for identity construction and social change",
+   authors:"Komaiya, G. J., Chiazor, F., Atoyebi, T. O., Okeke, V. C., Abdulrafiu, T., & Ebugosi, R. C.", year:2025, journal:"GRS Journal of Multidisciplinary Research and Studies", vol:"2(9), 124 to 133",
+   doi:"10.5281/zenodo.17197263", tag:"Co-author",
+   role:"Contributed to the digital ethnography, discourse analysis of hashtag conversations and interpretation of findings."},
+  {title:"Agentic AI in newsrooms: Towards a multi-dimensional framework for evaluating trust, editorial accountability, and workflow quality",
+   authors:"Agbaeze, S. E., Okeke, V. C., Phillips, E. P., Jacobs, A. L., & Oluwakoya, S. T.", year:2025, journal:"World Journal of Advanced Research and Reviews", vol:"28(2), 1061 to 1080",
+   doi:"10.30574/wjarr.2025.28.2.3766", tag:"Co-author",
+   role:"Contributed to the conceptual evaluation framework and to coding and thematic synthesis of the systematic literature review."},
+  {title:"Audience knowledge and perception of ABUAD Radio: Strategies for sustaining campus broadcasting in a competitive media landscape",
+   authors:"Okeke, V. C., Harold, G. O., & Ajisafe, I. O.", year:2025, journal:"World Journal of Advanced Research and Reviews", vol:"28(1), 1046 to 1052",
+   doi:"10.30574/wjarr.2025.28.1.3407", tag:"Co-first author",
+   role:"Co-designed the survey study, led questionnaire administration and contributed to analysis and interpretation using descriptive statistics."},
+  {title:"AI powered personalization in Nigerian e-commerce businesses: Enhancing customer engagement and conversion",
+   authors:"Akisanmi, D. O., Alabi, R. O., Egwuatu, J. O., Okeke, V. C., Ayittey, S., Onma, N. A., & Chukwumezie, U. E.", year:2025, journal:"Journal of Global Economics, Management and Business Research", vol:"17(3), 268 to 284",
+   doi:"10.56557/jgembr/2025/v17i39785", tag:"Co-author",
+   role:"Contributed to quantitative data analysis and co-wrote the sections on personalisation, customer engagement and privacy."}
+];
+
+const METHODS = ["Survey design","Questionnaire administration","Descriptive statistics","Focus group discussions","Content coding","Digital ethnography","Discourse analysis","Systematic literature review","Thematic synthesis","Quantitative analysis"];
+
+/* Journalism and media work. yt: YouTube video id. spotify: full Spotify link. */
+const MEDIA = [
+  {cat:"Documentary & interviews", title:"Interview with Brigadier General Olakunle Nafiu", note:"Director General, National Youth Service Corps", yt:"I-ZUhJezoLA", featured:true},
+  {cat:"Documentary & interviews", title:"Interview on Audacity", note:"Audacity podcast", yt:"tI2OD-PEgM0"},
+  {cat:"Documentary & interviews", title:"Outreach: skill training for people with disabilities", note:"Documentary", yt:"3xC178kUQmo"},
+  {cat:"Broadcast", title:"Moral Rebranding Series, Episode 1", note:"NYSC Television", yt:"AFPxHUIgdqo"},
+  {cat:"Broadcast", title:"Moral Rebranding Series, Episode 2", note:"NYSC Television", yt:"E6Yvn15fbQ0"},
+  {cat:"Broadcast", title:"Moral Rebranding Series, Episode 3", note:"NYSC Television", yt:"gPkzeI8zw7s"},
+  {cat:"Broadcast", title:"NYSC camp activities coverage", note:"NYSC Television", yt:"1L6PtBUp9Zg"},
+  {cat:"Audio & radio", title:"Moral Rebranding, radio edition", note:"88.3 FM NYSC Abuja", spotify:"https://open.spotify.com/show/1ECvpxrZIAJMgRqGc6K0kf"},
+  {cat:"Audio & radio", title:"ABUAD Radio series", note:"ABUAD Radio 88.1 FM", spotify:"https://open.spotify.com/show/2CEA4d9AF99QdlNXHg60iK"},
+  {cat:"Brand films", title:"CadLands brand video", note:"Brand video", yt:"NePfoHJ7ggE"},
+  {cat:"Brand films", title:"CadLands short ad", note:"Short-form ad", yt:"5l_tn_TqfEo"},
+  {cat:"Brand films", title:"ReadiCharge brand demo", note:"US launch", yt:"X9-uIdtGU-w"},
+  {cat:"Brand films", title:"ReadiCharge brand demo", note:"Four US markets", yt:"rMtlc1Vdrlo"},
+  {cat:"Brand films", title:"ReadiCharge ad", note:"Brand ad", yt:"AC79UoW0b5s"},
+  {cat:"Brand films", title:"ReadiCharge: Easy as 1, 2, 3", note:"Explainer", yt:"sQW9bo1Wt5g"},
+  {cat:"Brand films", title:"ReadiCharge: Easy as 1, 2, 3", note:"Flagship series", yt:"njasaOc0rFQ"},
+  {cat:"Event coverage", title:"Birthday coverage", note:"Emotional narrative edit", yt:"JTEH4IbPDdk"},
+  {cat:"Event coverage", title:"Birthday coverage", note:"Documentary-style edit", yt:"aLSxC2wt7C8"}
+];
+
+{
+  const order = ["Documentary & interviews", "Broadcast", "Audio & radio", "Brand films"];
+  const kept = MEDIA.filter(m => order.includes(m.cat));
+  kept.sort((x, y) => order.indexOf(x.cat) - order.indexOf(y.cat) || (y.yt === "3xC178kUQmo") - (x.yt === "3xC178kUQmo"));
+  MEDIA.splice(0, MEDIA.length, ...kept);
+}
+/* Testimonials. Add written ones as {name:"...", role:"...", quote:"..."} */
+const TESTIMONIALS = [
+  {name:"Mr. Materdei", role:"Video testimonial", yt:"B6O1C_Wjffg"}
+];
+
+/* true on GitHub Pages: videos play in a pop-up player. The build sets it. */
+const EMBED = true;
+
+/* Projects. Screens are filled in from assets/projects. */
+const PROJECTS = [
+  {id:"consentaudit", title:"Consent Language Audit", sub:"n8n workflow for auditing privacy and consent policies", cat:"Automation", tags:["n8n","Data privacy","AI"],
+   problem:"Privacy and consent policies are long, inconsistent and hard to compare, so it is difficult to see how clearly platforms ask for and explain consent.",
+   solution:"An n8n workflow that takes a list of platforms, fetches each policy page, scores and flags its consent language, sends it to an AI model for a consent review, then merges the results into one report. The first run covered 8 policies.",
+   screens:[["Workflow","Run Audit, Input List, Fetch Policy Page, Score and Flag, AI Consent Review, Merge AI Results, Build Report."]]},
+  {id:"readicharge", title:"ReadiCharge", sub:"EV charger installation platform", cat:"Product", tags:["UX design","Marketplace"],
+   problem:"EV owners struggle to find vetted local installers, which delays home charging setup.",
+   solution:"A marketplace that matches EV owners with certified installers, with quote comparison, booking and real-time tracking in one flow.", screens:[]},
+  {id:"readiblog", title:"ReadiCharge Blog Studio", sub:"AI SEO content generator", cat:"AI tool", tags:["AI tool","SEO"],
+   problem:"EV charger brands had no fast way to produce quality, search-optimised blog content for installers and customers.",
+   solution:"A dual-mode AI studio that generates blog posts and scores them against 12 SEO criteria, giving writers instant feedback.", screens:[]},
+  {id:"riviancharge", title:"RivianCharge", sub:"Home charging onboarding", cat:"Product", tags:["UX design","Onboarding"],
+   problem:"Rivian owners faced a confusing gap after purchase, with no brand-guided help to set up home charging.",
+   solution:"A branded setup flow that takes owners from vehicle confirmation to a scheduled installation in minutes.", screens:[]},
+  {id:"discipletrader", title:"DiscipleTrader", sub:"Trading discipline journal", cat:"Product", tags:["App design","Behaviour change"],
+   problem:"Retail traders break their own rules under pressure and have no system to track discipline over time.",
+   solution:"A rule-checklist journal with streaks, a graded trade calendar and a social leaderboard that make discipline a measurable daily habit.",
+   screens:[["Dashboard","Streak tracking, discipline level and monthly grade: the trader's daily accountability home."],["Trade calendar","Each trading day graded A+ to B, so patterns of discipline and lapses show at a glance."],["Rule checklist","A six-rule checklist graded in real time, turning an abstract strategy into measurable behaviour."],["Notifications","Nudges for streak risk, weekly drawdown summaries and behavioural prompts."],["Leaderboard","Partner and global rankings by discipline streak, a social accountability layer."],["Rule builder","Custom strategy templates let traders encode their own rules."]]},
+  {id:"campus2career", title:"Campus to Career", sub:"Student career launch platform", cat:"Social impact", tags:["Web design","Education"],
+   problem:"Students graduate without professional networks or structured paths into competitive industries.",
+   solution:"An event-led platform connecting students with industry leaders through workshops, networking and mentorship.", screens:[]},
+  {id:"petshelter", title:"PetShelter.ng", sub:"Pet adoption platform", cat:"Social impact", tags:["Web design","Nigeria"],
+   problem:"Abandoned dogs in Nigeria have little digital visibility, so caring families rarely find them.",
+   solution:"A profile-driven adoption site that tells each dog's story and temperament, turning browsing into connection.", screens:[]},
+  {id:"theflight", title:"TheFlight.ng", sub:"Telehealth platform", cat:"Web", tags:["Health tech","UX design"],
+   problem:"People in underserved areas face long waits and travel to see qualified practitioners for routine care.",
+   solution:"A credibility-first telehealth site connecting patients with RN-verified practitioners, built around trust and simple booking.", screens:[]},
+  {id:"fathercharles", title:"Father Charles", sub:"Faith and digital ministry", cat:"Web", tags:["Web design","Faith"],
+   problem:"A faith community lacked a dignified online space to submit prayer requests and sponsor vulnerable children.",
+   solution:"A calm ministry site that makes prayer submission and child sponsorship simple, bringing giving online.", screens:[]}
+];
+const ASSETS = {"readicharge": {"thumb": "assets/projects/readicharge-thumb.jpg", "pages": ["assets/projects/readicharge-1.jpg", "assets/projects/readicharge-2.jpg", "assets/projects/readicharge-3.jpg", "assets/projects/readicharge-4.jpg", "assets/projects/readicharge-5.jpg"]}, "readiblog": {"thumb": "assets/projects/readiblog-thumb.jpg", "pages": ["assets/projects/readiblog-1.jpg", "assets/projects/readiblog-2.jpg", "assets/projects/readiblog-3.jpg", "assets/projects/readiblog-4.jpg", "assets/projects/readiblog-5.jpg", "assets/projects/readiblog-6.jpg", "assets/projects/readiblog-7.jpg", "assets/projects/readiblog-8.jpg", "assets/projects/readiblog-9.jpg", "assets/projects/readiblog-10.jpg", "assets/projects/readiblog-11.jpg", "assets/projects/readiblog-12.jpg"]}, "riviancharge": {"thumb": "assets/projects/riviancharge-thumb.jpg", "pages": ["assets/projects/riviancharge-1.jpg", "assets/projects/riviancharge-2.jpg", "assets/projects/riviancharge-3.jpg"]}, "discipletrader": {"thumb": "assets/projects/discipletrader-thumb.jpg", "pages": ["assets/projects/discipletrader-1.jpg", "assets/projects/discipletrader-2.jpg", "assets/projects/discipletrader-3.jpg", "assets/projects/discipletrader-4.jpg", "assets/projects/discipletrader-5.jpg", "assets/projects/discipletrader-6.jpg"]}, "campus2career": {"thumb": "assets/projects/campus2career-thumb.jpg", "pages": ["assets/projects/campus2career-1.jpg", "assets/projects/campus2career-2.jpg", "assets/projects/campus2career-3.jpg"]}, "petshelter": {"thumb": "assets/projects/petshelter-thumb.jpg", "pages": ["assets/projects/petshelter-1.jpg", "assets/projects/petshelter-2.jpg"]}, "theflight": {"thumb": "assets/projects/theflight-thumb.jpg", "pages": ["assets/projects/theflight-1.jpg", "assets/projects/theflight-2.jpg", "assets/projects/theflight-3.jpg", "assets/projects/theflight-4.jpg"]}, "fathercharles": {"thumb": "assets/projects/fathercharles-thumb.jpg", "pages": ["assets/projects/fathercharles-1.jpg", "assets/projects/fathercharles-2.jpg"]}, "consentaudit": {"thumb": "assets/projects/consentaudit-thumb.jpg", "pages": ["assets/projects/consentaudit-1.jpg"]}};
+const KEEP = ["campus2career","theflight","fathercharles","petshelter"];
+PROJECTS.splice(0, PROJECTS.length, ...KEEP.map(id => PROJECTS.find(p => p.id === id)));
+PROJECTS.forEach(p => { const x = ASSETS[p.id] || {}; p.thumb = x.thumb || null; p.pages = x.pages || []; });
+
+/* Certificates, awards and affiliations.
+   img: path to the scanned certificate (opens full size). verify: public verification link. */
+const CREDS = [
+  {k:"Certificate", title:"Corporate Communications Specialization (3 courses)", issuer:"University of California, Irvine, via Coursera", year:"October 2025", img:"assets/certificates/uci-corporate-communications.jpg", verify:"https://coursera.org/verify/specialization/49DBH7A7JRIM"},
+  {k:"Certificate", title:"Become a Journalist: Report the News! Specialization (5 courses)", issuer:"Michigan State University School of Journalism, via Coursera", year:"October 2025", img:"assets/certificates/msu-become-a-journalist.jpg", verify:"https://coursera.org/verify/specialization/9CAPR4DJO9AQ"},
+  {k:"Certificate", title:"Introduction to Public Relations and the Media Specialization (3 courses)", issuer:"University of Colorado Boulder, via Coursera", year:"October 2025", img:"assets/certificates/boulder-public-relations.jpg", verify:"https://coursera.org/verify/specialization/LL3Q9YCB0SF4"},
+  {k:"Certificate", title:"Viral Marketing and How to Craft Contagious Content", issuer:"The Wharton School, University of Pennsylvania, via Coursera", year:"October 2025", img:"assets/certificates/wharton-viral-marketing.jpg", verify:"https://coursera.org/verify/XBCYMC80RB8H"},
+  {k:"Certificate", title:"Brand Management: Aligning Business, Brand and Behaviour", issuer:"University of London and London Business School, via Coursera", year:"October 2025", img:"assets/certificates/london-brand-management.jpg", verify:"https://coursera.org/verify/X3XYZ8GR52EI"},
+  {k:"Certificate", title:"Attract and Engage Customers with Digital Marketing", issuer:"Google, via Coursera", year:"November 2025", img:"assets/certificates/google-digital-marketing.jpg", verify:"https://coursera.org/verify/5X2JZ0S9J4I3"},
+  {k:"Certificate", title:"Generative AI Mastermind", issuer:"Outskill", year:"2025", img:"assets/certificates/outskill-generative-ai.jpg"},
+  {k:"Certificate", title:"2025 Combined NYSC IPR, Protocol, FOI and Media Officers' Workshop", issuer:"National Youth Service Corps, National Directorate Headquarters, Abuja", year:"9 to 12 November 2025", img:"assets/certificates/nysc-media-workshop-2025.jpg"},
+  {k:"Certificate", title:"TEDxABUAD 1.0, certificate of participation", issuer:"Pearls Club, Afe Babalola University", year:"9 April 2022", img:"assets/certificates/tedxabuad-2022.jpg"},
+  {k:"Certificate", title:"Kleverest Scenta Media Training", issuer:"Kleverest Scenta with the National Youth Service Corps, Abuja. Broadcasting code, radio and TV news reporting, documentary production, camera and video editing", year:"September 2025", img:"assets/certificates/kleverest-media-training-2025.jpg"},
+  {k:"Certificate", title:"Foundations of Teaching for Learning: Being a Teacher", issuer:"Commonwealth Education Trust, via Coursera", year:"October 2025", img:"assets/certificates/cet-foundations-of-teaching.jpg", verify:"https://www.coursera.org/account/accomplishments/verify/W0OLN7FO7EAM"},
+  {k:"Award", title:"Michael Taiwo Annual Scholarships, 2026 recipient", issuer:"Michael Taiwo Scholarships. One of 69 winners selected from 9,198 applicants", year:"2026", img:"assets/certificates/michael-taiwo-scholarship-2026.jpg", verify:"https://mtscholarships.org/winners/", verifyLabel:"See the winners page"},
+  {k:"Award", title:"Award of Excellence, NUMACS National Awards 2024", issuer:"National Union of Mass Communication Students (NUMACS)", year:"2024", img:"assets/certificates/numacs-award-2024.jpg"},
+  {k:"Award", title:"Brainiac of the Year, Meritorious Award", issuer:"Social and Management Science Students' Association (SAMSSA), Afe Babalola University", year:"April 2024", img:"assets/certificates/samssa-brainiac-2024.jpg"},
+  {k:"Award", title:"Outstanding Young Personality of the Year Award", issuer:"The Iconic Brand Awards, Global Edition", year:"4 November 2023", img:"assets/certificates/iconic-brand-awards-2023.jpg"},
+  {k:"Award", title:"Top 50 Most Influential African Influencers", issuer:"Engati (announcement graphic)", year:"2023", img:"assets/certificates/engati-top-50.jpg"},
+  {k:"Award", title:"Best Graduating Student, Department of Media and Communication", issuer:"Afe Babalola University, 12th Convocation", year:"2024", img:null},
+  {k:"Award", title:"Founder's Academic Excellence Award, three consecutive sessions", issuer:"Afe Babalola University", year:"2022 to 2024", img:null},
+  {k:"Award", title:"Award for Act of Service", issuer:"Female Leadership Forum, University of Calabar", year:"2021", img:null},
+  {k:"Membership", title:"Student Member, National Institute of Marketing of Nigeria", issuer:"NIMN, eligible for the Graduate Diploma in Marketing examination", year:"Since December 2022", img:"assets/certificates/nimn-student-membership.jpg"},
+  {k:"Membership", title:"Student Member, Association of Communication Scholars and Professionals of Nigeria", issuer:"ACSPN, fully registered student member", year:"2025", img:"assets/certificates/acspn-membership-2025.jpg"}
+];
+
+const TALKS = [
+  {date:"22 Nov 2025", role:"Speaker", title:"Community-led solutions: A practical lab for tackling unemployment", where:"CEO/Founder Leadership Summit, IVLead, Nigeria", img:"assets/certificates/ivlead-ceo-summit-2025.jpg", imgLabel:"Certificate of appreciation"},
+  {date:"28 Sep 2025", role:"Speaker", title:"Mastering LinkedIn optimisation", where:"DL4ALL Digital Literacy Champions, NYSC Abuja (online)", img:"assets/talks/dl4all-linkedin-optimisation-2025.jpg"},
+  {date:"23 Feb 2025", role:"Host", title:"How to get dream opportunities on LinkedIn", where:"Online session with Oluwarantimi Bukola", img:"assets/talks/linkedin-dream-opportunities-2025.jpg"},
+  {date:"9 Feb 2025", role:"Speaker", title:"Networking your way to opportunities on LinkedIn", where:"Online session, Google Meet", img:"assets/talks/linkedin-networking-2025.jpg"},
+  {date:"17 May 2024", role:"Guest", title:"An exclusive interview with COMSSA's outgoing president", where:"ABUAD Radio 88.1 FM", img:"assets/talks/abuad-radio-interview-2024.jpg"},
+  {date:"16 Sep 2023", role:"Speaker", title:"Ignite: Unleashing creative brilliance for innovation", where:"LinkedIn Local Oyo, LPI Hub, University of Ibadan", img:"assets/talks/linkedin-local-oyo-2023.jpg"},
+  {date:"2 Jul 2023", role:"Speaker", title:"Get the best out of internships: Everything you need to know", where:"SAMSSA and COMSSA, Afe Babalola University (online)", img:"assets/talks/samssa-comssa-internships-2023.jpg"},
+  {date:"8 Jul 2022", role:"Host", title:"How to get your dream job", where:"Global Transformation Conference, with Veronica Aina (online)", img:"assets/talks/gtc-dream-job-2022.jpg"},
+  {date:"17 Jun 2022", role:"Host", title:"How to build a six-figure copywriting business from anywhere in the world", where:"Global Transformation Conference, with Chinedu Junior (LinkedIn and YouTube)", img:"assets/talks/gtc-six-figure-copywriting-2022.jpg"},
+  {date:"13 to 15 May 2022", role:"Founder and speaker", title:"Gaining global relevance", where:"Global Transformation Conference (LinkedIn and YouTube)", img:"assets/talks/gtc-gaining-global-relevance-2022.jpg"},
+  {date:"13 Mar 2022", role:"Speaker", title:"Brand positioning: How to build a strong brand in 2022", where:"LizSocial Media, Women's History Month series with Elizabeth Lawal", img:"assets/talks/lizsocial-brand-positioning-2022.jpg"}
+];
+
+/* Sessions whose year is not on the flyer. Add a date to move one into the list above. */
+const MORE_TALKS = [
+  {title:"Ignite your performance: A roadmap to accomplishing more every time", where:"Global Transformation Conference", role:"Speaker", img:"assets/talks/gtc-ignite-performance.jpg"},
+  {title:"Becoming a viral author-ity", where:"Goloko Diaries (LinkedIn and YouTube)", role:"Speaker", img:"assets/talks/goloko-viral-authority.jpg"},
+  {title:"September LinkedIn Challenge 2.0", where:"Precious Growth Circle", role:"Speaker", img:"assets/talks/precious-growth-circle-linkedin-challenge.jpg"}
+];
+
+/* Impact stories: a short explanation plus photos. The first photo shows largest. */
+const STORIES = [
+  {tag:"Programme I founded", title:"Campus to Career",
+   text:"A career-readiness and mentorship programme I founded in 2024 and lead for university students. Each edition brings students face to face with professionals on employability, entrepreneurship and mindset. The first edition in 2024 reached 245 students. Campus to Career 2.0 in May 2026 drew more than 500 paid registrations and about 400 participants.",
+   photos:[["assets/impact/c2c-on-stage.jpg","Speaking on stage at Campus to Career"],["assets/impact/c2c-audience-1.jpg","Students taking notes during a Campus to Career session"],["assets/impact/c2c-audience-2.jpg","The Campus to Career audience"]]},
+  {tag:"Speaker · 22 November 2025", title:"CEO/Founder Leadership Summit, IVLead",
+   text:"A gathering of young professionals, entrepreneurs and aspiring founders under 30. I led a practical lab on community-led solutions to unemployment and received a certificate of appreciation from the organisers.",
+   photos:[["assets/impact/ivlead-speaking.jpg","Leading the lab on community-led solutions to unemployment"],["assets/impact/ivlead-audience.jpg","Addressing summit participants"],["assets/impact/ivlead-certificate.jpg","Receiving the certificate of appreciation"],["assets/impact/ivlead-group.jpg","Speakers and participants at the summit"]]},
+  {tag:"Community outreach", title:"School outreach",
+   text:"Visits to schools to talk with students about their education and the paths open to them.",
+   photos:[["assets/impact/school-outreach-1.jpg","Speaking with students at a school outreach visit"],["assets/impact/school-outreach-2.jpg","Students at a school outreach session"]]}
+];
+
+/* ===== Rendering ===== */
+const $ = s => document.querySelector(s);
+const el = (tag, cls, html) => { const e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html; return e; };
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+if (PHOTO) { $('#avatar').innerHTML = `<img src="${PHOTO}" alt="Vivian Claire Okeke">`; }
+
+/* tabs */
+const TABS = [...document.querySelectorAll('.tab')];
+function showTab(name, push) {
+  if (!document.getElementById(name)) name = 'profile';
+  TABS.forEach(t => {
+    const on = t.dataset.tab === name;
+    t.setAttribute('aria-selected', on);
+    t.tabIndex = on ? 0 : -1;
+    document.getElementById(t.dataset.tab).hidden = !on;
+  });
+  if (push) { try { history.replaceState(null, '', '#' + name); } catch (e) {} }
+}
+TABS.forEach((t, i) => {
+  t.addEventListener('click', () => { showTab(t.dataset.tab, true); if (window.innerWidth < 860) $('.main').scrollIntoView({behavior:'smooth', block:'start'}); });
+  t.addEventListener('keydown', e => {
+    if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+    const n = TABS[(i + (e.key === 'ArrowRight' ? 1 : TABS.length - 1)) % TABS.length];
+    n.focus(); showTab(n.dataset.tab, true);
+  });
+});
+showTab((location.hash || '#emmir').slice(1), false);
+window.addEventListener('hashchange', () => showTab(location.hash.slice(1), false));
+
+/* copy email */
+document.querySelectorAll('[data-copy]').forEach(b => b.addEventListener('click', () => {
+  const node = document.getElementById(b.dataset.copy);
+  const done = () => { b.textContent = 'Copied'; setTimeout(() => b.textContent = 'Copy', 1600); };
+  const fallback = () => { const r = document.createRange(); r.selectNodeContents(node); const s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = 'Selected'; setTimeout(() => b.textContent = 'Copy', 1600); };
+  try { navigator.clipboard.writeText(node.textContent).then(done, fallback); } catch (e) { fallback(); }
+}));
+
+/* publications */
+PUBS.forEach(p => {
+  const li = el('li', 'pub');
+  const me = p.authors.replace('Okeke, V. C.', '<b>Okeke, V. C.</b>');
+  const cover = p.img
+    ? `<button type="button" class="paper scan" aria-label="View first page of ${esc(p.title)}"><img src="${p.img}" alt="" loading="lazy"></button>`
+    : `<div class="paper" aria-hidden="true"><span class="p-j">${esc(p.journal)} · ${esc(p.vol.split(',')[0])}</span><span class="p-t">${esc(p.title)}</span><span class="p-a">${me}</span><span class="p-lines"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="p-doi">doi.org/${esc(p.doi)}</span></div>`;
+  li.innerHTML = `${cover}<div class="pub-info">
+    <div class="pub-top"><span class="pill">${esc(p.tag)}</span><span class="pill dim">${p.year}</span></div>
+    <h4>${esc(p.title)}</h4>
+    <p class="cite">${esc(p.authors)} (${p.year}). <i>${esc(p.journal)}</i>, ${esc(p.vol)}.</p>
+    <p class="pub-role">${esc(p.role)}</p>
+    <div class="pub-links"><a class="doi" href="https://doi.org/${p.doi}" target="_blank" rel="noopener">Read the paper: doi.org/${esc(p.doi)}</a>${p.cert ? '<button type="button" class="proof">Publication certificate</button>' : ''}</div></div>`;
+  if (p.img) li.querySelector('.paper').addEventListener('click', () => openLB(p.img, `${p.title}. ${p.journal}, ${p.year}`));
+  if (p.cert) li.querySelector('.proof').addEventListener('click', () => openLB(p.cert, `Certificate of publication. ${p.title}`));
+  $('#pubs').appendChild(li);
+});
+METHODS.forEach(m => $('#methods').appendChild(el('span', 'chip', esc(m))));
+
+/* media */
+const PLAY = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>';
+const WAVE = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 10v4M8 7v10M12 4v16M16 8v8M20 11v2"/></svg>';
+function mediaCard(m, big) {
+  const url = m.yt ? `https://www.youtube.com/watch?v=${m.yt}` : m.spotify;
+  const a = el('a', 'm-card' + (big ? ' big' : '') + (m.yt ? '' : ' audio'));
+  a.href = url; a.target = '_blank'; a.rel = 'noopener';
+  const art = m.yt
+    ? `<img src="https://i.ytimg.com/vi/${m.yt}/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()">`
+    : '';
+  a.innerHTML = `<div class="m-art"><span class="m-fallback">${m.yt ? PLAY : WAVE}</span>${art}<span class="m-play">${m.yt ? PLAY : WAVE}</span></div>
+    <div class="m-body"><span class="k">${esc(m.cat || m.role || '')}</span><h4>${esc(m.title || m.name)}</h4><p>${esc(m.note || '')}</p>
+    <span class="m-cta">${m.yt ? 'Watch on YouTube' : 'Listen on Spotify'}</span></div>`;
+  if (EMBED && m.yt) a.addEventListener('click', e => { e.preventDefault(); openPlayer(m); });
+  return a;
+}
+const feat = MEDIA.find(m => m.featured);
+if (feat) {
+  const r = $('#reel');
+  r.appendChild(mediaCard(feat, true));
+  r.appendChild(el('div', 'reel-text', `<span class="eyebrow">Featured interview</span><h3>${esc(feat.title)}</h3><p>${esc(feat.note)}. Recorded during my service year as a broadcast journalist at NYSC National Television and Radio.</p>`));
+}
+const mediaCards = MEDIA.map(m => { const c = mediaCard(m); c.dataset.cat = m.cat; $('#media-grid').appendChild(c); return c; });
+makeFilters($('#media-filters'), [...new Set(MEDIA.map(m => m.cat))], c => mediaCards.forEach(b => b.hidden = !(c === 'All' || b.dataset.cat === c)));
+TESTIMONIALS.forEach(t => {
+  if (t.yt) $('#testimonials').appendChild(mediaCard({...t, title: t.name, note: t.role, cat: 'Testimonial'}));
+  else $('#testimonials').appendChild(el('figure', 'quote', `<blockquote>${esc(t.quote)}</blockquote><figcaption><b>${esc(t.name)}</b>${t.role ? ', ' + esc(t.role) : ''}</figcaption>`));
+});
+if (!TESTIMONIALS.length) $('#testimonials-block').hidden = true;
+
+/* pop-up player (GitHub Pages only) */
+function openPlayer(m) {
+  lastFocus = document.activeElement;
+  $('#m-title').textContent = m.title || m.name; $('#m-sub').textContent = m.note || m.role || '';
+  $('#m-body').innerHTML = `<div class="modal-inner"><div class="player"><iframe src="https://www.youtube-nocookie.com/embed/${m.yt}?autoplay=1&rel=0" title="${esc(m.title || m.name)}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div><a class="m-cta" href="https://www.youtube.com/watch?v=${m.yt}" target="_blank" rel="noopener">Open on YouTube</a></div>`;
+  modal.hidden = false; document.body.style.overflow = 'hidden'; $('#m-close').focus();
+}
+
+/* lightbox */
+const lb = $('#lb');
+function openLB(src, cap) { $('#lb-img').src = src; $('#lb-img').alt = cap; $('#lb-cap').textContent = cap; lb.hidden = false; document.body.style.overflow = 'hidden'; $('#lb-close').focus(); }
+function closeLB() { lb.hidden = true; $('#lb-img').removeAttribute('src'); document.body.style.overflow = ''; }
+$('#lb-close').addEventListener('click', closeLB);
+lb.addEventListener('click', e => { if (e.target === lb) closeLB(); });
+
+/* filter helper */
+function makeFilters(host, cats, onPick) {
+  ['All', ...cats].forEach((c, i) => {
+    const b = el('button', 'filter', esc(c)); b.type = 'button'; b.setAttribute('aria-pressed', i === 0);
+    b.addEventListener('click', () => { host.querySelectorAll('.filter').forEach(x => x.setAttribute('aria-pressed', x === b)); onPick(c); });
+    host.appendChild(b);
+  });
+}
+
+/* projects */
+const projCards = PROJECTS.map((p, i) => {
+  const b = el('button', 'card'); b.type = 'button'; b.dataset.cat = p.cat;
+  const thumb = p.thumb ? `<img src="${p.thumb}" alt="" loading="lazy">` : `<span class="ph">${esc(p.title)}</span>`;
+  b.innerHTML = `<div class="thumb">${thumb}</div><div class="card-body"><span class="k">${esc(p.tags.join(' · '))}</span><h4>${esc(p.title)}</h4><p>${esc(p.sub)}</p></div>`;
+  b.addEventListener('click', () => openProject(i));
+  $('#projects').appendChild(b); return b;
+});
+makeFilters($('#filters'), [...new Set(PROJECTS.map(p => p.cat))], c => projCards.forEach(b => b.hidden = !(c === 'All' || b.dataset.cat === c)));
+
+const modal = $('#modal');
+let lastFocus = null;
+function openProject(i) {
+  const p = PROJECTS[i]; lastFocus = document.activeElement;
+  $('#m-title').textContent = p.title; $('#m-sub').textContent = p.sub;
+  const body = $('#m-body'); body.innerHTML = '';
+  const inner = el('div', 'modal-inner');
+  inner.appendChild(el('div', 'ps', `<div><b>Problem</b><span>${esc(p.problem)}</span></div><div><b>Solution</b><span>${esc(p.solution)}</span></div>`));
+  (p.pages || []).forEach((src, j) => {
+    const s = p.screens[j];
+    const f = el('figure', 'shot');
+    f.innerHTML = (s ? `<figcaption><b>${esc(s[0])}.</b> ${esc(s[1])}</figcaption>` : '') + `<img src="${src}" alt="${esc(p.title)} screen ${j + 1}" loading="${j < 2 ? 'eager' : 'lazy'}">`;
+    inner.appendChild(f);
+  });
+  body.appendChild(inner); body.scrollTop = 0;
+  modal.hidden = false; document.body.style.overflow = 'hidden'; $('#m-close').focus();
+}
+function closeModal() { modal.hidden = true; $('#m-body').innerHTML = ''; document.body.style.overflow = ''; if (lastFocus) lastFocus.focus(); }
+$('#m-close').addEventListener('click', closeModal);
+document.addEventListener('keydown', e => { if (e.key === 'Escape') { if (!lb.hidden) closeLB(); else if (!modal.hidden) closeModal(); } });
+
+/* credentials */
+CREDS.sort((a, b) => (a.img ? 0 : 1) - (b.img ? 0 : 1));
+const credCards = CREDS.map(c => {
+  const card = el('article', 'cred' + (c.img ? ' has-img' : '')); card.dataset.cat = c.k;
+  const art = c.img
+    ? `<button type="button" class="cred-art" aria-label="View ${esc(c.title)} full size"><img src="${c.img}" alt="${esc(c.title)}" loading="lazy"></button>`
+    : `<div class="cred-art"><div class="seal"><small>${esc(c.k)}</small><i>${esc(c.issuer)}</i></div></div>`;
+  const links = c.verify ? `<a class="verify" href="${c.verify}" target="_blank" rel="noopener">${esc(c.verifyLabel || 'Verify on Coursera')}</a>` : '';
+  card.innerHTML = `${art}<div class="cred-body"><h4>${esc(c.title)}</h4><p>${esc(c.issuer)}</p>${c.year ? `<span class="yr">${esc(c.year)}</span>` : ''}${links}</div>`;
+  if (c.img) card.querySelector('button').addEventListener('click', () => openLB(c.img, `${c.title}. ${c.issuer}`));
+  $('#creds').appendChild(card); return card;
+});
+{
+  const first = ["Become a Journalist", "Public Relations and the Media", "Generative AI Mastermind", "Viral Marketing", "Corporate Communications", "Media Officers", "Kleverest", "Attract and Engage", "Brand Management", "Foundations of Teaching", "TEDxABUAD"];
+  const rank = c => { const i = first.findIndex(f => c.title.includes(f)); return (c.img ? 0 : 1000) + (c.k !== "Certificate" ? 100 : i < 0 ? 50 : i); };
+  const cards = [...document.querySelectorAll('#creds .cred')];
+  cards.map((el, i) => [el, CREDS[i]]).sort((a, b) => rank(a[1]) - rank(b[1])).forEach(([el]) => $('#creds').appendChild(el));
+}
+makeFilters($('#cred-filters'), ['Certificate', 'Award', 'Membership'], c => credCards.forEach(b => b.hidden = !(c === 'All' || b.dataset.cat === c)));
+
+/* talks */
+function talkRow(t) {
+  const row = el('div', 'talk' + (t.img ? ' has-thumb' : ''));
+  row.innerHTML = `<time>${esc(t.date || '')}</time><div class="talk-text"><span class="pill">${esc(t.role)}</span><h4>${esc(t.title)}</h4><p>${esc(t.where)}</p></div>` +
+    (t.img ? `<button type="button" class="thumb-btn" aria-label="View ${esc(t.imgLabel || 'event flyer')}"><img src="${t.img}" alt="" loading="lazy"><span>${esc(t.imgLabel ? 'Certificate' : 'Flyer')}</span></button>` : '');
+  if (t.img) row.querySelector('.thumb-btn').addEventListener('click', () => openLB(t.img, `${t.title}. ${t.where}`));
+  return row;
+}
+TALKS.forEach(t => $('#talklist').appendChild(talkRow(t)));
+if (MORE_TALKS.length) {
+  $('#more-talks-block').hidden = false;
+  MORE_TALKS.forEach(t => $('#moretalks').appendChild(talkRow(t)));
+}
+STORIES.forEach(st => {
+  const art = el('article', 'story' + (st.photos.length > 3 ? ' four' : st.photos.length === 2 ? ' two' : ''));
+  const shots = st.photos.map(([src, cap], i) => `<button type="button" class="shot-btn${i === 0 ? ' lead' : ''}" data-src="${src}" data-cap="${esc(cap)}" aria-label="${esc(cap)}"><img src="${src}" alt="${esc(cap)}" loading="lazy"></button>`).join('');
+  art.innerHTML = `<div class="story-text"><span class="eyebrow">${esc(st.tag)}</span><h4>${esc(st.title)}</h4><p>${esc(st.text)}</p></div><div class="mosaic">${shots}</div>`;
+  art.querySelectorAll('.shot-btn').forEach(b => b.addEventListener('click', () => openLB(b.dataset.src, b.dataset.cap)));
+  $('#stories').appendChild(art);
+});
+</script>
+
+</body>
+</html>
