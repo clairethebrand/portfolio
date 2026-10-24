@@ -276,6 +276,9 @@ button.cred-art:hover img{transform:scale(1.03)}
 .shot figcaption{font-size:.84rem;color:var(--muted)}
 .shot figcaption b{color:var(--gold-hi);font-weight:500}
 .shot img{border:1px solid var(--line);border-radius:10px;width:100%}
+.shot video{border:1px solid var(--line);border-radius:10px;width:100%;display:block;background:#0E0A07}
+.live-link{justify-self:start;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--line-2);padding:9px 16px;border-radius:999px}
+.live-link:hover{border-color:var(--gold);text-decoration:none}
 figure{margin:0}
 .lb{position:fixed;inset:0;z-index:60;background:rgba(6,4,3,.95);display:grid;place-items:center;padding:clamp(16px,4vw,48px)}
 .lb img{max-height:84vh;width:auto;max-width:100%;border-radius:8px;border:1px solid var(--line-2)}
@@ -578,6 +581,27 @@ const PROJECTS = [
    problem:"Privacy and consent policies are long, inconsistent and hard to compare, so it is difficult to see how clearly platforms ask for and explain consent.",
    solution:"An n8n workflow that takes a list of platforms, fetches each policy page, scores and flags its consent language, sends it to an AI model for a consent review, then merges the results into one report. The first run covered 8 policies.",
    screens:[["Workflow","Run Audit, Input List, Fetch Policy Page, Score and Flag, AI Consent Review, Merge AI Results, Build Report."]]},
+  {id:"munjul", title:"Munjul Perfumes", sub:"Perfume oil storefront with online card payments", cat:"Web", tags:["Web design","E-commerce","Payments"],
+   url:"https://munjulworld.com",
+   problem:"A perfume oil brand selling mainly through Instagram had no storefront, so new buyers could not easily browse its 53 scents, compare prices or pay without a back-and-forth in messages.",
+   solution:"A storefront that opens with a scroll-driven story of the bottle being filled, capped and labelled, then a full catalogue, a Find my scent quiz that matches buyers by scent family, and card checkout through Paystack, with prices checked on the server.",
+   thumb:"assets/projects/munjul-thumb.jpg",
+   videos:[["assets/projects/munjul-demo.mp4","assets/projects/munjul-poster.jpg","Walkthrough","The animated product story, the collection, the scent finder and the order flow."]],
+   screens:[]},
+  {id:"stjerome", title:"St. Jerome School of Theology", sub:"Admissions website for a diocesan theology institute", cat:"Web", tags:["Web design","Education","Faith"],
+   url:"https://stjeromeschooloftheology.com",
+   problem:"An institute of the Catholic Diocese of Ekwulobia needed a clear, trustworthy place for applicants to learn about its programmes and get the admission form without first travelling to the school.",
+   solution:"A website presenting the school's vision, programmes, gallery and leadership, with a four-step admission path (download the form, fill it in, pay the fee, submit in person) and a one-click admission form download.",
+   thumb:"assets/projects/stjerome-thumb.jpg",
+   videos:[["assets/projects/stjerome-demo-1.mp4","assets/projects/stjerome-poster-1.jpg","About the school","Home page, vision and mission, and the gallery."],["assets/projects/stjerome-demo-2.mp4","assets/projects/stjerome-poster-2.jpg","Admissions","The admission steps, application fee, contact details and the downloadable form."]],
+   screens:[]},
+  {id:"funtrend", title:"Funtrend Events", sub:"Booking website for a wedding MC and DJ company in Lagos", cat:"Web", tags:["Web design","Events","Lead generation"],
+   url:"https://funtrendevents.com",
+   problem:"Couples and planners need to judge an MC and DJ quickly, and enquiries that arrive as loose messages often miss the date, guest count, venue and services needed.",
+   solution:"A high-energy site led by MC Walter that shows services, past work, testimonials, pricing, photography and kids' entertainment, with a booking form that turns the event details into a ready-to-send WhatsApp message to the team.",
+   thumb:"assets/projects/funtrend-thumb.jpg",
+   videos:[["assets/projects/funtrend-demo.mp4","assets/projects/funtrend-poster.jpg","Walkthrough","From the hero and MC Walter's profile to services, gallery and a booking sent through WhatsApp."]],
+   screens:[]},
   {id:"readicharge", title:"ReadiCharge", sub:"EV charger installation platform", cat:"Product", tags:["UX design","Marketplace"],
    problem:"EV owners struggle to find vetted local installers, which delays home charging setup.",
    solution:"A marketplace that matches EV owners with certified installers, with quote comparison, booking and real-time tracking in one flow.", screens:[]},
@@ -605,7 +629,7 @@ const PROJECTS = [
    solution:"A calm ministry site that makes prayer submission and child sponsorship simple, bringing giving online.", screens:[]}
 ];
 const ASSETS = {"readicharge": {"thumb": "assets/projects/readicharge-thumb.jpg", "pages": ["assets/projects/readicharge-1.jpg", "assets/projects/readicharge-2.jpg", "assets/projects/readicharge-3.jpg", "assets/projects/readicharge-4.jpg", "assets/projects/readicharge-5.jpg"]}, "readiblog": {"thumb": "assets/projects/readiblog-thumb.jpg", "pages": ["assets/projects/readiblog-1.jpg", "assets/projects/readiblog-2.jpg", "assets/projects/readiblog-3.jpg", "assets/projects/readiblog-4.jpg", "assets/projects/readiblog-5.jpg", "assets/projects/readiblog-6.jpg", "assets/projects/readiblog-7.jpg", "assets/projects/readiblog-8.jpg", "assets/projects/readiblog-9.jpg", "assets/projects/readiblog-10.jpg", "assets/projects/readiblog-11.jpg", "assets/projects/readiblog-12.jpg"]}, "riviancharge": {"thumb": "assets/projects/riviancharge-thumb.jpg", "pages": ["assets/projects/riviancharge-1.jpg", "assets/projects/riviancharge-2.jpg", "assets/projects/riviancharge-3.jpg"]}, "discipletrader": {"thumb": "assets/projects/discipletrader-thumb.jpg", "pages": ["assets/projects/discipletrader-1.jpg", "assets/projects/discipletrader-2.jpg", "assets/projects/discipletrader-3.jpg", "assets/projects/discipletrader-4.jpg", "assets/projects/discipletrader-5.jpg", "assets/projects/discipletrader-6.jpg"]}, "campus2career": {"thumb": "assets/projects/campus2career-thumb.jpg", "pages": ["assets/projects/campus2career-1.jpg", "assets/projects/campus2career-2.jpg", "assets/projects/campus2career-3.jpg"]}, "petshelter": {"thumb": "assets/projects/petshelter-thumb.jpg", "pages": ["assets/projects/petshelter-1.jpg", "assets/projects/petshelter-2.jpg"]}, "theflight": {"thumb": "assets/projects/theflight-thumb.jpg", "pages": ["assets/projects/theflight-1.jpg", "assets/projects/theflight-2.jpg", "assets/projects/theflight-3.jpg", "assets/projects/theflight-4.jpg"]}, "fathercharles": {"thumb": "assets/projects/fathercharles-thumb.jpg", "pages": ["assets/projects/fathercharles-1.jpg", "assets/projects/fathercharles-2.jpg"]}, "consentaudit": {"thumb": "assets/projects/consentaudit-thumb.jpg", "pages": ["assets/projects/consentaudit-1.jpg"]}};
-PROJECTS.forEach(p => { const x = ASSETS[p.id] || {}; p.thumb = x.thumb || null; p.pages = x.pages || []; });
+PROJECTS.forEach(p => { const x = ASSETS[p.id] || {}; p.thumb = x.thumb || p.thumb || null; p.pages = x.pages || []; });
 
 /* Certificates, awards and affiliations.
    img: path to the scanned certificate (opens full size). verify: public verification link. */
@@ -758,6 +782,12 @@ function openProject(i) {
   const body = $('#m-body'); body.innerHTML = '';
   const inner = el('div', 'modal-inner');
   inner.appendChild(el('div', 'ps', `<div><b>Problem</b><span>${esc(p.problem)}</span></div><div><b>Solution</b><span>${esc(p.solution)}</span></div>`));
+  if (p.url) { const a = el('a', 'live-link', `Visit the live site: ${esc(p.url.replace(/^https?:\/\//, ''))} &#8599;`); a.href = p.url; a.target = '_blank'; a.rel = 'noopener'; inner.appendChild(a); }
+  (p.videos || []).forEach(([src, poster, cap, desc]) => {
+    const f = el('figure', 'shot');
+    f.innerHTML = `<figcaption><b>${esc(cap)}.</b> ${esc(desc)}</figcaption><video controls muted playsinline preload="metadata" poster="${poster}" src="${src}"></video>`;
+    inner.appendChild(f);
+  });
   (p.pages || []).forEach((src, j) => {
     const s = p.screens[j];
     const f = el('figure', 'shot');
