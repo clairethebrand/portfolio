@@ -443,10 +443,10 @@ footer{grid-column:1/-1;text-align:center;font-size:.78rem;color:var(--faint);pa
     </div>
   </section>
 
-  <!-- ================= BUILT WITH AI ================= -->
+  <!-- ================= BUILT WITH TECHNOLOGY ================= -->
   <section class="pane" id="built" role="tabpanel" aria-labelledby="t-built" hidden>
     <div class="pane-head"><h2>Built with Technology</h2><div class="rule"></div>
-      <p class="lede">Tools, automations, products and websites I designed and built with AI, automation and no-code platforms. Select a project to see it in full.</p></div>
+      <p class="lede">Automations, tools, products and websites I designed and built with code, workflow automation and no-code platforms. Select a project to see it in full.</p></div>
     <div class="filters" id="filters" role="group" aria-label="Filter projects"></div>
     <div class="grid" id="projects"></div>
   </section>
@@ -573,14 +573,26 @@ const METHODS = ["Survey design","Questionnaire administration","Descriptive sta
 
 /* Projects. Screens are filled in from assets/projects. */
 const PROJECTS = [
-  {id:"newsscanner", title:"Real-Time Story Scanner", sub:"AI automation that cut newsroom sourcing time under deadline", cat:"Automation", tags:["AI","Automation","Workflow"],
+  {id:"newsscanner", title:"Real-Time Story Scanner", sub:"Automation that cut newsroom sourcing time under deadline", cat:"Automation", tags:["Automation","Workflow","Newsroom"],
    problem:"A live newsroom on deadline needs a faster way to surface developing stories and turn them into broadcast-ready copy, without pulling a producer off the desk to do manual research.",
    solution:"A tool that scans the web in real time for developing stories and returns them already formatted in the station's own broadcast style, cutting the gap between a story breaking and it reaching the bulletin. Built and used during my service year inside a working newsroom at NYSC National Television and Radio, Abuja.",
    screens:[]},
-  {id:"consentaudit", title:"Consent Language Audit", sub:"n8n workflow for auditing privacy and consent policies", cat:"Automation", tags:["n8n","Data privacy","AI"],
+  {id:"consentaudit", title:"Consent Language Audit", sub:"n8n workflow for auditing privacy and consent policies", cat:"Automation", tags:["n8n","Data privacy","Workflow"],
    problem:"Privacy and consent policies are long, inconsistent and hard to compare, so it is difficult to see how clearly platforms ask for and explain consent.",
-   solution:"An n8n workflow that takes a list of platforms, fetches each policy page, scores and flags its consent language, sends it to an AI model for a consent review, then merges the results into one report. The first run covered 8 policies.",
-   screens:[["Workflow","Run Audit, Input List, Fetch Policy Page, Score and Flag, AI Consent Review, Merge AI Results, Build Report."]]},
+   solution:"An n8n workflow that takes a list of platforms, fetches each policy page, scores and flags its consent language, reviews how clearly each policy asks for consent, then merges the results into one report. The first run covered 8 policies.",
+   screens:[["Workflow","Run Audit, Input List, Fetch Policy Page, Score and Flag, Consent Review, Merge Results, Build Report."]]},
+  {id:"salesreport", title:"Evening Sales Report", sub:"n8n workflow that emails a farm owner a daily sales briefing", cat:"Automation", tags:["n8n","Google Sheets","Gmail"],
+   problem:"A poultry farm owner needed a clear view of sales at the end of each day without opening spreadsheets, and with around 150 orders on record, summarising them by hand took too long.",
+   solution:"A scheduled n8n workflow that runs at 7 p.m. every day, reads the orders from Google Sheets, calculates revenue, weekly trends, top products and sales channels in code, writes a short executive summary from those verified figures only, and emails a formatted report through Gmail that can be read in under two minutes.",
+   thumb:"assets/projects/salesreport-thumb.jpg",
+   videos:[["assets/projects/salesreport-demo.mp4","assets/projects/salesreport-poster.jpg","Walkthrough","The five steps of the workflow, a live run and the finished report in Gmail."]],
+   screens:[]},
+  {id:"supporttickets", title:"Support Ticket Routing", sub:"n8n workflow that sends each customer request to the right team", cat:"Automation", tags:["n8n","Tally","Google Sheets"],
+   problem:"Customer requests about deliveries, refunds, products and billing all arrived in one place, so someone had to read, log and forward each one by hand.",
+   solution:"Customers submit a Tally form that triggers an n8n webhook. The workflow cleans the data, gives the request a ticket number, logs it in Google Sheets and routes it by issue type to the delivery, refunds, product support or billing team by email, with customer care as the fallback.",
+   thumb:"assets/projects/supporttickets-thumb.jpg",
+   videos:[["assets/projects/supporttickets-demo.mp4","assets/projects/supporttickets-poster.jpg","Walkthrough","Two live tests, a delayed delivery and a shipping question, each logged in Google Sheets and emailed to the right team."]],
+   screens:[]},
   {id:"munjul", title:"Munjul Perfumes", sub:"Perfume oil storefront with online card payments", cat:"Web", tags:["Web design","E-commerce","Payments"],
    url:"https://munjulworld.com",
    problem:"A perfume oil brand selling mainly through Instagram had no storefront, so new buyers could not easily browse its 53 scents, compare prices or pay without a back-and-forth in messages.",
@@ -605,9 +617,9 @@ const PROJECTS = [
   {id:"readicharge", title:"ReadiCharge", sub:"EV charger installation platform", cat:"Product", tags:["UX design","Marketplace"],
    problem:"EV owners struggle to find vetted local installers, which delays home charging setup.",
    solution:"A marketplace that matches EV owners with certified installers, with quote comparison, booking and real-time tracking in one flow.", screens:[]},
-  {id:"readiblog", title:"ReadiCharge Blog Studio", sub:"AI SEO content generator", cat:"AI tool", tags:["AI tool","SEO"],
+  {id:"readiblog", title:"ReadiCharge Blog Studio", sub:"SEO content generator", cat:"Content tool", tags:["Content tool","SEO"],
    problem:"EV charger brands had no fast way to produce quality, search-optimised blog content for installers and customers.",
-   solution:"A dual-mode AI studio that generates blog posts and scores them against 12 SEO criteria, giving writers instant feedback.", screens:[]},
+   solution:"A dual-mode content studio that generates blog posts and scores them against 12 SEO criteria, giving writers instant feedback.", screens:[]},
   {id:"riviancharge", title:"RivianCharge", sub:"Home charging onboarding", cat:"Product", tags:["UX design","Onboarding"],
    problem:"Rivian owners faced a confusing gap after purchase, with no brand-guided help to set up home charging.",
    solution:"A branded setup flow that takes owners from vehicle confirmation to a scheduled installation in minutes.", screens:[]},
@@ -622,6 +634,7 @@ const PROJECTS = [
    problem:"Abandoned dogs in Nigeria have little digital visibility, so caring families rarely find them.",
    solution:"A profile-driven adoption site that tells each dog's story and temperament, turning browsing into connection.", screens:[]},
   {id:"theflight", title:"TheFlight.ng", sub:"Telehealth platform", cat:"Web", tags:["Health tech","UX design"],
+   url:"https://theflight.ng",
    problem:"People in underserved areas face long waits and travel to see qualified practitioners for routine care.",
    solution:"A credibility-first telehealth site connecting patients with RN-verified practitioners, built around trust and simple booking.", screens:[]},
   {id:"fathercharles", title:"Father Charles", sub:"Faith and digital ministry", cat:"Web", tags:["Web design","Faith"],
